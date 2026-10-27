@@ -13,11 +13,57 @@
 //  WARM-UP: Favorite Colors
 // ============================================
 // Build an array of 3 colors and print each one.
+let numbers = [];
+
+for (let i = 0; i < 5; i++) {
+  let input = prompt("Enter number " + (i + 1));
+  let number = parseFloat(input);
+  numbers.push(number);
+}
 
 // STEP 1: Create an array called "colors" with exactly
 //         three strings: "red", "green", "blue"
 //         Use let to declare it.
+let numberString = "";
 
+for (let i = 0; i < numbers.length; i++) {
+  numberString += numbers[i];
+
+  if (i < numbers.length - 1) {
+    numberString += ", ";
+  }
+}
+
+console.log("Numbers: " + numberString);
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+
+console.log("Sum: " + sum);
+let average = sum / numbers.length;
+console.log("Average: " + average);
+
+// Count the even numbers
+let count = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 === 0) {
+    count++;
+  }
+}
+
+console.log("Even count: " + count);
+let largest = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > largest) {
+    largest = numbers[i];
+  }
+}
+
+console.log("Largest: " + largest);
 // STEP 2: Use a for loop to print each color.
 //         Each line should say exactly:
 //         "Color: red"
@@ -69,75 +115,3 @@
 //         Start with the first number as the largest.
 //         Loop through the rest and update if you find a bigger one.
 //         Print: console.log("Largest: " + largest)
-```javascript
-// ============================================
-// WARM-UP: Favorite Colors
-// ============================================
-
-let colors = ["red", "green", "blue"];
-
-for (let i = 0; i < colors.length; i++) {
-  console.log("Color: " + colors[i]);
-}
-
-
-// ============================================
-// MAIN: Number Analyzer
-// ============================================
-
-let numbers = [];
-
-for (let i = 0; i < 5; i++) {
-  let input = prompt("Enter number " + (i + 1));
-  let number = parseFloat(input);
-  numbers.push(number);
-}
-
-// Print all numbers on one line
-let numberString = "";
-
-for (let i = 0; i < numbers.length; i++) {
-  numberString += numbers[i];
-
-  if (i < numbers.length - 1) {
-    numberString += ", ";
-  }
-}
-
-console.log("Numbers: " + numberString);
-
-// Calculate the sum
-let sum = 0;
-
-for (let i = 0; i < numbers.length; i++) {
-  sum += numbers[i];
-}
-
-console.log("Sum: " + sum);
-
-// Calculate the average
-let average = sum / numbers.length;
-console.log("Average: " + average);
-
-// Count the even numbers
-let count = 0;
-
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] % 2 === 0) {
-    count++;
-  }
-}
-
-console.log("Even count: " + count);
-
-// Find the largest number
-let largest = numbers[0];
-
-for (let i = 1; i < numbers.length; i++) {
-  if (numbers[i] > largest) {
-    largest = numbers[i];
-  }
-}
-
-console.log("Largest: " + largest);
-```
