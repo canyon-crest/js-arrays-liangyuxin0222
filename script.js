@@ -13,6 +13,11 @@
 //  WARM-UP: Favorite Colors
 // ============================================
 // Build an array of 3 colors and print each one.
+let colors = ["red", "green", "blue"];
+
+for (let i = 0; i < colors.length; i++) {
+  console.log("Color: " + colors[i]);
+}
 let numbers = [];
 
 for (let i = 0; i < 5; i++) {
